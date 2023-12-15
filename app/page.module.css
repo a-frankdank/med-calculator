@@ -1,0 +1,209 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  /*
+  min-height: 100vh;
+  */
+  overflow-y: hidden;
+}
+
+.wfmain {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  min-height: 100vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+  */
+  overflow-y: hidden;
+}
+
+.wfmain div {
+  padding: 0.05rem;
+  margin: 1rem;
+}
+
+.wfmain a:link {
+  color: #0b2d55e8;
+}
+
+.wfmain a:visited {
+  color: #1d0b558f;
+}
+
+.wfmain a:hover {
+  color: #1d0b55bb;
+}
+
+.wfmain a:active {
+  color: #1d0b55e8;
+}
+
+.wftable tr.td {
+  margin: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  padding: 0.5rem;
+  background-color: rgba(33, 95, 107, 0.432);
+}
+
+.bgblack {
+  background-color: black;
+}
+
+.navcard {
+  padding: 0.5rem 0.7rem;
+  border-radius: var(--border-radius);
+  background: rgba(33, 95, 107, 0.432);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.navcard span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.navcard p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+.wftable {
+  /*
+  TODO sticky tfoot with scrollbar on body
+  doesnt really work
+  */
+  border-collapse: collapse;
+  background-color: rgba(178, 185, 187, 0.452);
+}
+
+.wftable tr:nth-child(even) {
+  background-color: rgba(151, 182, 190, 0.452);
+}
+
+.wftable td {
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+
+.wftable tbody {
+  height: 61vh;
+  overflow-y: scroll;
+}
+
+.wftable tfoot {
+  position: sticky;
+}
+
+.wftable tfoot tr {
+  bottom: 0;
+}
+
+.tableRight {
+  width: 12rem;
+  text-align: right !important;
+}
+
+.redText {
+  color: red;
+}
+
+.buttonSpan {
+  padding-left: 0.1rem;
+}
+
+.buttonSpan button {
+  padding: 5px 11px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px #999;
+}
+
+.buttonSpan button:hover {
+  background-color: #3c443c
+}
+
+.buttonSpan button:active {
+  background-color: #000a00e1;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}
+
+
+.buttonDiv {
+  /*
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  top: 0;
+  z-index: 101;
+  position: -webkit-sticky;
+  position: sticky;
+  */
+
+  /*
+  */
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 19rem;
+  left: 0.5rem;
+  width: fit-content;
+  height: fit-content;
+  /*
+  background-color: blue;
+  background-color: transparent;
+  */
+}
+
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .navcard:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(38, 98, 110, 0.432);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+
+  .navcard:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+
+  .navcard:hover span {
+    transform: none;
+  }
+}
